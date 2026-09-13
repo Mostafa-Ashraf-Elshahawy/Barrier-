@@ -1,0 +1,11 @@
+[theme]
+primaryColor = "#2563eb"
+backgroundColor = "#09090b"
+secondaryBackgroundColor = "#131316"
+textColor = "#fafafa"
+font = "sans serif"
+
+[server]
+headless = true
+port = 8502
+maxUploadSize = 25
