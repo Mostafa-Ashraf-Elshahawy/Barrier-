@@ -86,17 +86,26 @@ The application will automatically open in your default browser at `http://local
 
 ---
 
-## ☁️ Deploying to Streamlit Community Cloud
+## ☁️ Deployment Guide
 
-1. Fork or push this repository to your GitHub account.
-2. Sign in to [share.streamlit.io](https://share.streamlit.io/).
-3. Click **"New App"** and select:
+### A. Deploy to Streamlit Community Cloud (Backend ML Engine)
+
+1. Sign in to [share.streamlit.io](https://share.streamlit.io/) with GitHub.
+2. Click **"New App"** and select:
    - **Repository:** `Mostafa-Ashraf-Elshahawy/Barrier-`
    - **Branch:** `main`
    - **Main file path:** `app.py`
-4. Click **Deploy!**
+3. Click **Deploy!** Your app will be live at `https://<your-app-name>.streamlit.app`.
+
+### B. Deploy to Vercel (Web Gateway & Portal)
+
+1. Import this repository into [Vercel](https://vercel.com/new).
+2. Vercel automatically detects `index.html` and `vercel.json` as a static web deployment.
+3. Click **Deploy**.
+4. Once deployed, open your Vercel URL and click **Settings (⚙️)** in the top bar to connect your Streamlit app URL, or append `?app=https://<your-app-name>.streamlit.app` directly to your Vercel URL!
 
 ---
+
 
 ## 📁 Repository Structure
 
