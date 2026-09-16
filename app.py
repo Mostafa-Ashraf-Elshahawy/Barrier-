@@ -1105,3 +1105,16 @@ with tab_about:
     - **Data Manipulation**: Pandas, NumPy
     - **Repository**: [GitHub: Mostafa-Ashraf-Elshahawy/Barrier-](https://github.com/Mostafa-Ashraf-Elshahawy/Barrier-)
     """)
+
+
+# ---------------------------------------------------------
+# Cloud Build / WSGI Serverless Compatibility Handler
+# ---------------------------------------------------------
+def _compat_handler(environ=None, start_response=None):
+    if start_response:
+        start_response("200 OK", [("Content-Type", "text/plain")])
+    return [b"Barrier Customer Churn Intelligence is running."]
+
+app = _compat_handler
+application = _compat_handler
+handler = _compat_handler
