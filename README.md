@@ -88,7 +88,7 @@ The application will automatically open in your default browser at `http://local
 
 ## ☁️ Deployment Guide
 
-### A. Deploy to Streamlit Community Cloud (Backend ML Engine)
+### Deploy to Streamlit Community Cloud
 
 1. Sign in to [share.streamlit.io](https://share.streamlit.io/) with GitHub.
 2. Click **"New App"** and select:
@@ -97,33 +97,26 @@ The application will automatically open in your default browser at `http://local
    - **Main file path:** `app.py`
 3. Click **Deploy!** Your app will be live at `https://<your-app-name>.streamlit.app`.
 
-### B. Deploy to Vercel (Web Gateway & Portal)
-
-1. Import this repository into [Vercel](https://vercel.com/new).
-2. Vercel automatically detects `index.html` and `vercel.json` as a static web deployment.
-3. Click **Deploy**.
-4. Once deployed, open your Vercel URL and click **Settings (⚙️)** in the top bar to connect your Streamlit app URL, or append `?app=https://<your-app-name>.streamlit.app` directly to your Vercel URL!
-
 ---
-
 
 ## 📁 Repository Structure
 
 ```text
 ├── .streamlit/
-│   └── config.toml                  # Custom styling and server configuration
+│   └── config.toml                  # UI styling and server port configuration
 ├── artifacts/
 │   └── model_comparison.csv         # Benchmark evaluation metrics across 8 algorithms
 ├── data/
 │   ├── churn_data.csv               # Raw customer dataset (7,042 records)
 │   └── processed_churn_data.csv     # Preprocessed dataset with engineered features
 ├── models/
-│   └── churn_model_package.pkl      # Pre-trained Random Forest model and scaler
+│   └── churn_model_package.pkl      # Trained Random Forest model and StandardScaler
 ├── notebooks/
 │   ├── preproccing.ipynb            # Data cleaning, EDA & feature transformation
 │   └── training models.ipynb        # Model training, 5-Fold GridSearchCV & evaluation
-├── app.py                           # Main Streamlit web application
-├── requirements.txt                 # Application dependencies
+├── app.py                           # Clean, structured Streamlit web application
+├── packages.txt                     # Linux system dependencies (libgomp1 for XGBoost)
+├── requirements.txt                 # Application Python dependencies
 └── README.md                        # Documentation & project guide
 ```
 
